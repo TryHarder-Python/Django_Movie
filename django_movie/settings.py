@@ -176,13 +176,9 @@ STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]
 STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-# if DEBUG:
-#     MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-#     MEDIA_URL = '/media/'
-# else:
-MEDIA_URL = '/media/'
-DEFAULT_FILE_STORAGE = 'django.core.files.storage.Storage'
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 SOCIALACCOUNT_PROVIDERS = {
     'github': {
